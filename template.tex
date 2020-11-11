@@ -1,0 +1,378 @@
+\documentclass[journal]{vgtc} 
+\usepackage{hs-vis_ss10}
+\usepackage{mathptmx}
+
+%% Please note that the use of figures other than the optional teaser
+%% is not permitted on the first page of the journal version.  Figures
+%% should begin on the second page and be in CMYK or Grey scale
+%% format, otherwise, colour shifting may occur during the printing
+%% process.  Papers submitted with figures other than the optional
+%% teaser on the first page will be refused.
+
+%% These three lines bring in essential packages: ``mathptmx'' for
+%% Type 1 typefaces, ``graphicx'' for inclusion of EPS figures. and
+%% ``times'' for proper handling of the times font family.
+
+\usepackage[english]{babel} 
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fdsymbol}
+\usepackage{tcolorbox}
+\usepackage{pifont}
+\usepackage{etoc}
+%% allow for this line if you want the electronic option to work
+%% properly
+\vgtcinsertpkg
+
+%% author name
+\author{Intelligent Systems Group}
+
+%% paper title
+\title{How-To Thesis Formalities at VIS-IS}
+
+%% short title for header
+\shorttitle{How-To Thesis Formalities at VIS-IS}
+
+
+%% Abstract section.
+\abstract{%
+  The document summarizes style guidelines for formal text documents such as theses and seminars in the Intelligent Systems Group, Institute for Visualization and Interactive Systems.
+} % end of abstract
+
+
+%% Uncomment below to include a (optional) teaser figure.
+% \teaser{ \centering
+%   \includegraphics[width=16cm]{images/CypressView}
+%   \caption{In den Wolken: Vancouver von Cypress Mountain. Auf der
+%     ersten Seite d"urfen keine Grafiken au"ser dieser optionalen
+%     Aufmachgrafik (Teaser) abgebildet sein.}
+% }
+
+%\newcommand{\darksq}[1]{$\color{CD02}\largeblacksquare$ {\color{CD02}\textbf{#1:}}}
+\newcommand{\darksq}[1]{$\color{CD02}\largeblacksquare$ \textbf{#1:}}
+%\newcommand{\lightsq}[1]{$\color{CD03}\largeblacksquare$ {\color{CD03}\textbf{#1:}}}
+\newcommand{\lightsq}[1]{$\color{CD03}\largeblacksquare$ \textbf{#1:}}
+\newcommand{\lightgreysq}[1]{$\color{CD04}\largeblacksquare$ \textbf{#1:}}
+\newcommand{\darkgreysq}[1]{$\color{CD01}\largeblacksquare$ \textbf{#1:}}
+\newcommand{\blacksq}[1]{$\largeblacksquare$ \textbf{#1:}}
+\newcommand{\highlight}[1]{\textcolor{CD02}{#1}}
+
+%size: normal, title, small, fbox, tight, minimal
+%corners: guide p.48
+\newcommand{\dont}[1]{%
+\tcbset{colback=red!2!white, colframe=red!65!black, size=small, title={\color{red!65!black} \phantom{\ding{51}}\llap{\ding{55}}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.25pt, bottomrule=0.25pt, sharp corners=all, detach title, before upper={\tcbtitle\quad}, before skip=.5\baselineskip]%
+    {\color{CD01}#1}%
+\end{tcolorbox}}
+
+\newcommand{\doit}[1]{%
+\tcbset{colback=CD02!5!white, colframe=CD01,size=small, title={\color{CD01} \ding{51}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.25pt, bottomrule=0.25pt, sharp corners=all, detach title, before upper={\tcbtitle\quad}, before skip=.5\baselineskip]%
+    {\color{CD01}#1}%
+\end{tcolorbox}}
+
+\newcommand{\dontdo}[2]{%
+\tcbset{colback=red!2!white, colframe=red!65!black, size=small, title={\color{red!65!black} \phantom{\ding{51}}\llap{\ding{55}}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.25pt, bottomrule=0.0pt, sharp corners=all, after skip=0pt, before skip=.5\baselineskip, detach title, before upper={\tcbtitle\quad}]%
+    {\color{CD01}#1}%
+\end{tcolorbox}%
+\tcbset{colback=CD02!5!white, colframe=CD01, size=small, title={\color{CD01} \ding{51}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.0pt, bottomrule=0.25pt, sharp corners=all, before skip=0pt, detach title, before upper={\tcbtitle\quad}]%
+    {\color{CD01}#2}%
+\end{tcolorbox}}
+
+\newcommand{\dodont}[2]{%
+\tcbset{colback=CD02!5!white, colframe=CD01, size=small, title={\color{CD01} \ding{51}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.25pt, bottomrule=0.0pt, sharp corners=all, after skip=0pt, before skip=.5\baselineskip, detach title, before upper={\tcbtitle\quad}]%
+    {\color{CD01}#1}%
+\end{tcolorbox}%
+\tcbset{colback=red!2!white, colframe=red!65!black, size=small, title={\color{red!65!black} \phantom{\ding{51}}\llap{\ding{55}}}}%
+\begin{tcolorbox}%
+    [leftrule=0.25pt, rightrule=0.25pt, toprule=0.0pt, bottomrule=0.25pt, sharp corners=all, before skip=0pt, detach title, before upper={\tcbtitle\quad}]%
+    {\color{CD01}#2}%
+\end{tcolorbox}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title
+%%   block.
+
+%%   the only exception to this rule is the \firstsection command
+%\firstsection{About this Guide}
+
+\invisiblelocaltableofcontents \label{toc:overview}
+
+\maketitle
+\section*{About this Guide}
+
+When you have to write formal documents like theses or seminar papers, not only the content matters.
+Such works also have to conform with certain style rules.
+The guidelines for \enquote{correct formatting} presented here are a mix of general formatting guidelines and rules that should be followed when you write a thesis with our group.
+General formatting rules that hold for most scientific texts in the field of computer science and mathematics are marked with a dark blue square $\color{CD02}\largeblacksquare$.
+The second subset of rules is marked with a light blue square $\color{CD03}\largeblacksquare$ and better described as a \enquote{matter of (styling-)taste}, but should be followed for theses with our group.
+However, those may not apply for theses written with other groups.
+
+\lightgreysq{Contact} To report typos or pose questions about this document, please contact Jenny Schmalfuss (\href{mailto:jenny.schmalfuss@vis.uni-stuttgart.de}{jenny.schmalfuss@vis.uni-stuttgart.de}).
+
+\begingroup\parindent 0pt \parfillskip 0pt \leftskip 0cm \rightskip 1cm
+\etocsetstyle {section}
+    {}
+    {\leavevmode\leftskip 0.5cm\relax}
+    {\normalsize\makebox[0.5cm][l]{\etocnumber}%
+    \etocname\nobreak{\color{gray}\dotfill\phantom{\etocpage}}\nobreak%
+    \rlap{\makebox[-0.1cm]{\mdseries\etocpage}}\par\vspace*{-0.4\baselineskip}}
+    {}
+\etocsettocstyle{\raggedright\large\textbf{Document Overview}\par}{}
+\tableofcontents
+\endgroup
+%----------------------------------------------------------
+%
+%      Template and Thesis Formalities
+%
+%----------------------------------------------------------
+
+\section{Template and Thesis Formalities}
+
+Unless you are given a specific template, we recommend to use the \href{https://github.com/BilalChughtai/uni-stuttgart-computer-science-template}{unofficial University of Stuttgart thesis template [https://github.com/BilalChughtai/uni-stuttgart-computer-science-template]} from GitHub.
+
+\lightgreysq{Important} While the style of your document is mostly up to you, theses at the Department of Computer Science at the University of Stuttgart have to have a special {\color{CD02}front page format}.
+Additionally, you need to inlcude the official {\color{CD02}declaration} that the work you present is entirely your own.
+For the most up to date version of both, please visit \href{https://www.f05.uni-stuttgart.de/en/cs/students/thesis/}{https://www.f05.uni-stuttgart.de/en/cs/students/thesis/}.
+
+%----------------------------------------------------------
+%
+%      General Formatting
+%
+%----------------------------------------------------------
+\section{General Formatting}
+\label{sec:generalformatting}
+
+\lightsq{Capitalize Headings} For headings, use the title case, which is also used in this document.
+Capitalize the first letter of every word, except for words like \enquote{a}, \enquote{and}, \enquote{of}, \enquote{the}, \enquote{with}, etc.
+\dodont{1.2 \ A Guide to Good Writing}{1.2 \ A guide to good writing}
+
+
+\lightsq{Abstract Length} The abstract should contain approximately 250--300 words.
+
+\darksq{Paragraph Length} In your document, each paragraph should contain at least two or three sentences.
+
+\darksq{Chapter Structure} A chapter should start with an {\color{CD02}introduction} and end with a short {\color{CD02}summary}. In the introduction you motivate your chapter and should shortly recap the most important points that are needed to understand the following content. In the summary you formulate the key findings of your chapter.
+
+\lightsq{Page Structure} Make sure your reader does not get lost in your document. Therefore, do not write more than one page of text without a new paragraph heading (or chapter, section, or subsection).
+
+\lightsq{List of ...} Do not include a list of figures, list of tables or lists other than the table of contents. The table of contents is sufficient if you write a thesis with us.
+
+
+%----------------------------------------------------------
+%
+%      Equations and Referencing
+%
+%----------------------------------------------------------
+\section{Equations and Referencing}
+
+\darksq{Symbols in Sentences} Never start a sentence with a formula symbol. You should rather embed the symbol in your sentence:
+\dodont{The original image is denoted by $f$.}{$f$ is the original image.}
+
+\darksq{Symbol Introduction} If you use a symbol, for example in a formula, it must be explained somewhere close to its first appearance.
+%\doit{[Formula], where $f$ is the input image $\dots$}
+\doit{For a scalar function $f(x,y)$, the Laplacian $\Delta$ is defined as \begin{equation}\Delta f = \partial_{xx} f + \partial_{yy} f. \end{equation}\vspace*{-\baselineskip}}
+
+\darksq{Referencing Figures} Every figure, table, listing, or other content that can be placed in floating environments must be referenced in the text at least once.
+
+\darksq{Self-Contained Captions} The captions for figures, tables and listings should be self-contained, i.e.\ contain all elementary explanations. Always explain your figure as if your reader would only browse through your thesis and only look at the figures and their captions.
+
+\darksq{Caption End} Always end figure-, table-, etc.\ captions with a full stop.
+\dodont{\textbf{Figure~5.2:} A schematic overview of optical flow estimation.}{\textbf{Figure~5.2:} A schematic overview of optical flow estimation}
+
+\lightsq{Equation-Text-Integration} Integrate the used equations, also those in an equation environment, into the sentence. You can do so by ending it with \enquote{.}, or include them by continuing after a comma \enquote{,}, for example: 
+\doit{A convolution of function $g$ with kernel $K_\sigma$ is defined as %
+\begin{equation}\label{equ:conv}%
+(K_\sigma * g)(x) = \int_\mathds{R} K_\sigma(y) g(x-y) \ \mathrm{d}y . %
+\end{equation}}
+
+\lightsq{Equation Orientation} Center your equations.
+\dodont{\vspace*{-0.9\baselineskip}\begin{equation}(a+b)(a+b) = a\cdot a + 2ab + b\cdot b\end{equation}\vspace*{-1.4\baselineskip}}%
+{\vspace*{-1.9\baselineskip}\begin{flalign}\phantom{ABC}(a-b)(a-b) = a\cdot a - 2ab + b\cdot b && \end{flalign}%
+\vspace*{-2.6\baselineskip}\begin{flalign} && (a+b)(a-b) &= a\cdot a - b\cdot b \end{flalign}\vspace*{-1.7\baselineskip}}
+
+\lightsq{Capitalization of References} Capitalize words like \enquote{chapter}, \enquote{section}, \enquote{figure}, \enquote{equation} and \enquote{table} if they are succeeded by a reference number. The same goes for \enquote{Frame~1}, \enquote{Sequence~1}, etc. Omit the capitalization in general phrases, where the object title is not followed by a concrete reference number.
+\dodont{The effect of smoothing is visualized in Figure~3.}{The effect of smoothing is visualized in figure~3.}
+\dodont{We introduce the concept in the next chapter.}{We introduce the concept in the next Chapter.}
+
+\darksq{Write Reference Type} When referencing, always include the referenced type (figure, equation or table).
+\dodont{As can be seen in Figure~2.6, regularization is important.}{As can be seen in 2.6, regularization is important.}
+\dodont{Using the convolution definition from equation~\eqref{equ:conv} yields ...}{Using \eqref{equ:conv} yields ...}
+
+\lightsq{Tying Reference and Number} Use a \enquote{$\sim$}, which is called an \highlight{unbreakable space}, in your \LaTeX \ document to avoid that the reference type and number show up in different lines:
+\doit{\texttt{Figure$\sim$\textbackslash ref\{fig:myfigure\}}}
+
+\lightsq{Equation Referencing} To reference equations, use \texttt{\textbackslash eqref} instead of \texttt{\textbackslash ref} in texts.
+For example, with equation
+\begin{equation}\label{equ:axb}
+    Ax = b,
+\end{equation}
+the use of 
+\dodont{\texttt{Equation$\sim$\textbackslash eqref\{equ:axb\}} produces \enquote{Equation~\eqref{equ:axb}},}{{\texttt{Equation$\sim$\textbackslash ref\{equ:axb\}}} produces \enquote{Equation~\ref{equ:axb}}.}
+
+\darksq{Protected Spaces (and Abbreviations)} If you have the need to abbreviate words like \enquote{etc.}, always put a \highlight{protected space} \enquote{\texttt{\textbackslash \ }} after the full stop to prevent it from being treated as end of the sentence, which may visually increase the space after. 
+In block-aligned texts, \LaTeX \ often uses the space after a full stop to stretch a line with fewer characters, resulting in an oddly large gap after abbreviated characters.
+But even knowing how to prevent this behaviour, it is best to limit abbreviations to a bare minimum.
+Especially in the case of \enquote{etc.}, it is strongly recommended that you give two more examples instead of using it.
+\dodont{\texttt{etc.\textbackslash \ }: ..., convolutions, etc.\ are transformations. This yields...}%
+{\texttt{etc.\phantom{\textbackslash \ }}: ..., convolutions, etc. are transformations. This yields...}
+
+
+%----------------------------------------------------------
+%
+%      Consistency
+%
+%----------------------------------------------------------
+\section{Consistency}
+
+
+In all documents, it is important to pay attention to a consistent usage of symbols and spelling:
+    \begin{itemize}
+        \item Use consistent formula symbols
+        \item Use consistent spelling
+        \item Use a numbering for all equations
+    \end{itemize}
+    
+\lightsq{Personal vs. Impersonal Writing Style} It is valid to use \enquote{we} formulations (personal writing style) in your thesis. In this case, the \enquote{we} should refer to you (the author) and the reader, to whom you explain your work and who is following your explanation process.
+\doit{We develop a new method for optical flow estimation.}
+\doit{Let us denote a general image function by $f$.}
+    
+
+%----------------------------------------------------------
+%
+%      Presenting Results
+%
+%----------------------------------------------------------
+\section{Presenting Results}
+
+Organize the experiments and structure them internally:
+\begin{enumerate}
+    \item \highlight{What do you want to show?} Formulate the main research question, or a theorem.
+    \item \highlight{Which variants are compared, which datasets are used?} Give details about the technical aspects, and the experiment setup.
+    \item \highlight{What was observed?} Describe the results:
+    \begin{enumerate}
+        \item Quantitative (reference your table(s) here)
+        \item Qualitative (reference your figure(s) here)
+    \end{enumerate}
+    \item \highlight{Why was it observed?} Analyse and interpret your results and try to explain the outcome.
+\end{enumerate}
+
+
+
+%----------------------------------------------------------
+%
+%      Citations
+%
+%----------------------------------------------------------
+\section{Citations}
+
+
+\darksq{Referencing from the Text}
+There are two options to add references to your text: Either you integrate it into the sentence, which is usually done by naming the author(s) (last name only) followed by a reference, or you leave out the author names, only keeping the reference.
+\doit{... as shown by Zimmer~\emph{et al.}~\cite{Zimmer2011} ...}
+\doit{... which is evaluated using the Sintel dataset~\cite{SintelButler2012}.}
+
+\darksq{Different Author Counts} If you reference the author(s) from the text by name, handle the following cases accordingly:
+If there is only one author, use her/his name. If there are two authors, name both of them. If there are more than two authors, use the first author's name and the abbreviation \enquote{et al.}. \enquote{Et al.} comes from the Latin \emph{et alii} and means \emph{and others}.
+
+\darksq{Abbreviation} The abbreviation \enquote{\emph{et al.}} should be \emph{italic} and followed by a dot and a protected space.
+\doit{\texttt{\textbackslash emph\{et$\sim$al.\textbackslash \ \}}}
+
+\darksq{Good Scientific Practise}
+Although it should be clear: Adhere to the rules of good scientific practise, i.e.\ if you copy something from a source, cite it properly.
+
+\darksq{Citing Images}
+If you copy images, you need to cite them, e.g.\ by adding it to the end of the caption.
+Also, if you adapt an image from a source, this must be noted.
+\doit{\textbf{Figure~2.3:} Schematic overview of the Proflow pipeline. Image source:~\cite{Maurer2018a}.}
+\doit{\textbf{Figure~4.1:} Illustration showing the combination step. Image adapted from~\cite{Maurer2018a}.}
+
+
+%----------------------------------------------------------
+%
+%      Bibliography
+%
+%----------------------------------------------------------
+\section{Bibliography}
+
+There are different scientific publication types, which must be referenced appropriately.
+
+\lightgreysq{Conference Paper} A conference paper was accepted at a scientific conference.
+The conference has a name and usually a specific abbreviation, e.g.\ the British Machine Vision Conference (BMVC).
+Since conferences take place annually or bi-annually, the year is also given.
+%Before a paper is accepted, it undergoes a double blind peer review process.
+%At the conference, the author usually either gives a presentation or presents her/his work in a poster.
+After the conference, the paper is published in a designated book, the \emph{conference proceedings}.
+This book has a title, which is often very generic (such as \enquote{Computer Vision}).
+Thus, the usual way to reference the proceedings (abbreviated \enquote{Proc.}) is by the name of the conference and the year, e.g.\ \enquote{Proc.\ British Machine Vision Conference (BMVC), 2018}.
+
+To reference a conference paper, use the BibTex entry type \highlight{InProceedings}. Make sure to provide the \highlight{author}, \highlight{year} (no month necessary), \highlight{title} (paper title) and \highlight{booktitle} (conference proceedings title) fields.
+It is common to use \enquote{Proc.\ <conference name> (<conference abbreviation>)} as a booktitle.
+Additionally, you should provide the \highlight{publisher} and the \highlight{pages}, where the paper can be found in the proceedings, if possible.
+Examples are given by \cite{SintelButler2012,Maurer2018a}.
+%\doit{D.\ Maurer, A.\ Bruhn. \enquote{ProFlow: learning to predict optical flow}. In: \textit{Proc.\ British Machine Vision Conference (BMVC)}. BMVA Press, 2018.}
+
+\darksq{LNCS number} If an LNCS (Lecture Notes in Computer Science) number is available, provide in the BibTex series field.
+\doit{D.\ Maurer, N.\ Marniok, B.\ Goldluecke, A.\ Bruhn.\ “Structure-from-motion-aware
+patchmatch for adaptive optical flow estimation”.\ In: Proc.\ European Conference
+on Computer Vision (ECCV). LNCS 11212. Springer, 2018, pages 575–592.}
+
+\lightgreysq{Journal Paper} Journal papers are related to conference papers, but are published in a scientific journal.
+Usually, they consist of more pages than a conference paper.
+Since journals publish in a non annually cycle, apart from the year, the journal volume and number must be given.
+To reference journal papers, use the BibTex entry type \highlight{Article} and provide the \highlight{author}, \highlight{title}, \highlight{journal}, \highlight{volume}, \highlight{number} and \highlight{year} fields.
+Also provide the \highlight{pages} field if possible.
+An example journal paper can be found in~\cite{Zimmer2011}.
+
+\lightgreysq{PhD Thesis} A PhD thesis is a book, which is a result of the years of research as a PhD student.
+To reference a PhD thesis, use the BibTex entry type \highlight{PhdThesis} and provide the \highlight{author}, \highlight{title}, \highlight{year} and \highlight{school} (university name) fields.
+See \cite{Maurer2019} as an example.
+
+\lightgreysq{Book} A book should be referenced using the BibTex entry type \highlight{book} with the fields \highlight{title}, \highlight{year}, \highlight{author} and \highlight{publisher}.
+Also the \highlight{volume} should be given if possible.
+A book is referenced in~\cite{Weickert1998}.
+
+\lightsq{Capitalization in Titles} Capitalize the titles of books and PhD theses in title case, as described for chapter titles in Section~\ref{sec:generalformatting}.
+The titles of conference and journal papers should in general not be capitalized, except for the first letter. An exception to this are fixed names or abbreviations (e.g.\ \enquote{CNN} or Fourier).
+\dodont{J.\ Weickert.\ \textit{Anisotropic Diffusion in Image Processing}, volume 1.\ Teubner Stuttgart, 1998.}{J.\ Weickert.\ \textit{Anisotropic diffusion in image processing}, volume 1.\ Teubner Stuttgart, 1998.}
+
+\dodont{Z.\ Teed and J.\ Dang. RAFT: recurrent all pairs field transforms for optical flow. In \textit{Proc.\ European Conference on Computer Vision (ECCV)}, LNCS 12347, pages 402--419. Springer, 2020.}{Z.\ Teed and J.\ Dang. RAFT: Recurrent All Pairs Field Transforms for Optical Flow. In \textit{Proc.\ European Conference on Computer Vision (ECCV)}, LNCS 12347, pages 402--419. Springer, 2020.}
+
+\darksq{ArXiv papers}
+ArXiv.org is a publishing server, where everyone can upload pdf files.
+Thus, there is no scientific review process involved.
+In general, papers should not be cited from there.
+Sometimes authors upload preliminary versions of their papers to an arXiv server, which are then findable through search engines. Most of the times, however, the paper is already reviewed and published in a scientific context.
+An example is the ProFlow paper \cite{Maurer2018a} that is sometimes wrongly cited with the ArXiv version, or more recently RAFT \cite{RAFT}.
+
+\darksq{Author names}
+Make sure the author names are consistently handled in the bibliography, i.e.\ consistently abbreviate the first name and stick to the order \enquote{<first name> <last name>}.
+List all authors in the correct order and don't use the \enquote{et al.}-abbreviation in the bibliography.
+
+\bibliographystyle{abbrv}
+%% use following if all content of bibtex file should be shown
+% \nocite{*}
+\bibliography{literatur}
+\end{document}
