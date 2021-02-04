@@ -1,6 +1,6 @@
 # Purpose
 
-This document is for students who are writing a thesis at the Intelligent Systems Group of the University of Stuttgart.
+This document is for students who are writing a thesis at the Computer Vision Group of the University of Stuttgart.
 It contains general rules for writing theses with LaTex in a computer science or math department, along with more specific formatting rules that should be followed especially in our group.
 
 The source code for the document may help you if you want to know how the pdf file was produced.
