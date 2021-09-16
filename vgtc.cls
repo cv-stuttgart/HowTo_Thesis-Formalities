@@ -301,7 +301,7 @@
 
 %%MEGHAN Comment from here
 \newcommand{\manuscriptnotetxt}{
-Institut f\"ur Visualisierung und Interaktive Systeme, Universit\"at Stuttgart. %\semestertext
+Abteilung Computer Vision, Institut f\"ur Visualisierung und Interaktive Systeme, Universit\"at Stuttgart. %\semestertext
 % Manuscript received 31 March 2009; accepted 27 July 2009; posted online 11 October 2009; mailed on 5 October 2009.\par
 % For information on obtaining reprints of this article, please send email~to:~tvcg@computer.org~.
 }
@@ -710,7 +710,7 @@ Institut f\"ur Visualisierung und Interaktive Systeme, Universit\"at Stuttgart. 
            %% new logo
            \vspace{-0.4cm}
            \begin{minipage}[c]{0.15\linewidth}
-             \includegraphics[width=1.2cm]{vislogo}
+             \includegraphics[width=1.2cm]{CV_Logo}
            \end{minipage}
            %% end logo
            \begin{minipage}[c]{0.8\linewidth}
